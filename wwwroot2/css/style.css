@@ -1,0 +1,92 @@
+﻿/* styles.css */
+body {
+    font-family: 'Arial', sans-serif; /* หรือฟอนต์ที่ต้องการ */
+    background-color: #eef5f9;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Verdana', sans-serif; /* ตัวอย่างฟอนต์สำหรับหัวข้อ */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    flex-grow: 1;
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping instead of overlapping */
+    justify-content: center; /* Centers cards in a row */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    color: black;
+    width: 250px; /* Fixed width */
+    height: 450px; /* Fixed height */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .card:hover {
+        border: 2px solid #8e44ad;
+        transition: 0.3s;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px; /* กำหนดความสูงของรูป */
+        object-fit: cover; /* ป้องกันการยืดหรือบิดเบี้ยว */
+        border-radius: 10px 10px 0 0;
+    }
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-text {
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.view-detail-btn {
+    background-color: #00bfff; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+    .view-detail-btn:hover {
+        background-color: #8e44ad;
+        color: white;
+    }
