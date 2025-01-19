@@ -173,3 +173,4 @@ C:\zoom\Meaw\MeawMarket\MeawMarket\obj\Debug\net8.0\refint\meawMarket.dll
 C:\zoom\Meaw\MeawMarket\MeawMarket\obj\Debug\net8.0\meawMarket.pdb
 C:\zoom\Meaw\MeawMarket\MeawMarket\obj\Debug\net8.0\meawMarket.genruntimeconfig.cache
 C:\zoom\Meaw\MeawMarket\MeawMarket\obj\Debug\net8.0\ref\meawMarket.dll
+C:\zoom\Meaw\MeawMarket\MeawMarket\obj\Debug\net8.0\meawMarket.sourcelink.json

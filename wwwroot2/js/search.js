@@ -282,13 +282,12 @@ function initSearchFunctionality() {
                 type: "GET",
                 dataType: "json",
                 xhrFields: { withCredentials: true },
-                crossDomain: true,
                 success: function (data) {
                     console.log("✅ User's Cats Received:", data);
                     $("#catResults").empty();
 
                     if (!Array.isArray(data)) {
-                        alert("🐱 " + (data.message || "No cats found for this user."));
+                        alert("🐱 " + (data.message || "No meaws found for this user."));
                         $("#catResults").append("<p class='text-center text-danger'>You don't own any cats.</p>");
                         return; // ✅ ออกจาก function ไม่ต้องรัน `.forEach()`
                     }
@@ -310,15 +309,15 @@ function initSearchFunctionality() {
                     });
                     
                 },
-                error: function (xhr, status, error) {
-                    console.error("❌ Error fetching user's cats:", status, error);
-                    if (xhr.status === 401 || xhr.status === 403) {
-                        alert("🔒 Please log in to view your cats.");
-                        window.location.href = "/api/user/login";  // 🔄 Redirect ไปยังหน้า Login
+                error: function (xhr) {
+                    console.error("❌ Error fetching user's cats:", xhr.responseText);
+
+                    if (xhr.status === 401) {
+                        alert("🔒 Please log in to view your meaws.");
+                        window.location.href = "/api/user/login"; // 🔄 Redirect ไปหน้า Login
                     } else {
                         alert("❌ Error: Unable to fetch data. Please try again later.");
-                    } 
-                     
+                    }
                 }
             });
         });

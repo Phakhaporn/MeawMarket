@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("meawMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+670b3fa496dedb366747acbe55baf2090792fd6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("meawMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("meawMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

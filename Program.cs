@@ -48,16 +48,25 @@ app.Use(async (context, next) =>
 {
     await next(); // ดำเนินการ Middleware ต่อไป
 
-    if (context.Response.StatusCode == 401)
+    if (context.Response.StatusCode == 401) // Unauthorized
     {
-        context.Response.ContentType = "application/json";
-        await context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(new
+        if (context.Request.Headers["X-Requested-With"] == "XMLHttpRequest") // เช็คว่าเป็น AJAX หรือไม่
         {
-            message = "Unauthorized. Please log in.",
-            redirectUrl = "/api/user/login"
-        }));
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(new
+            {
+                message = "Unauthorized. Please log in.",
+                redirectUrl = "/api/user/login"
+            }));
+        }
+        else
+        {
+            context.Response.Redirect("/api/user/login"); // 🔄 รีไดเร็กต์ไปหน้า Login ถ้าเป็น request ปกติ
+        }
     }
 });
+
+
 
 
 app.UseStaticFiles();
